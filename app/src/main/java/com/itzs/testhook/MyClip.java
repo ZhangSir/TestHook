@@ -29,7 +29,7 @@ public class MyClip implements InvocationHandler {
     public Object invoke(Object proxy, Method method, Object[] args) throws Throwable {
         //这里我们拦截粘贴的方法，
         if("getPrimaryClip".equals(method.getName())){
-            return ClipData.newPlainText(null,"我是刘镓旗，我改了系统源码，哈哈哈");
+            return ClipData.newPlainText(null,"这是我们拦截粘贴方法，插入的一条固定内容！");
         }
         //再拦截是否有复制的方法，放系统认为一直都有
         if("hasPrimaryClip".equals(method.getName())){
